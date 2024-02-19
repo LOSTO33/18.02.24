@@ -2,16 +2,18 @@ from datetime import datetime
 
 
 class Note:
-    id = 0
+    count: int = 0
+    id = None
     name = ""
     date = ""
     text = ""
 
-    def __init__(self, name, date, text):
-        Note.id += 1
-        self.name = name
-        self.date = date
-        self.text = text
+    def __init__(self, **dict_instance: dict):
+        self.id = Note.count
+        Note.count += 1
+        self.name = dict_instance.get('name')
+        self.date = dict_instance.get('date')
+        self.text = dict_instance.get('text')
 
     def set_id(self, value):
         self.id = value
