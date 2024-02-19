@@ -9,7 +9,7 @@ class Menu:
                   4: notes.save_notes_to_file}
 
     def start(self):
-        while(True):
+        while True:
             self.view.show_main_menu()
             choice = self.view.input_number(len(self.commands.keys()), 'menu')
             if choice == 0:

@@ -1,4 +1,6 @@
 from menu import Menu
 
-app = Menu()
-app.start()
+
+if __name__ == "__main__":
+    app = Menu()
+    app.start()

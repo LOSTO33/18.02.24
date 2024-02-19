@@ -7,6 +7,12 @@ class Note:
     date = ""
     text = ""
 
+    def __init__(self, name, date, text):
+        Note.id += 1
+        self.name = name
+        self.date = date
+        self.text = text
+
     def set_id(self, value):
         self.id = value
 
